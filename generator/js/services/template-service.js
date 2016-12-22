@@ -64,23 +64,7 @@ app.factory('TemplateService', ['$location', '$q', '$http', function ($location,
         return pictures;
     }
 
-    function readHTML() {
-        var deferred = $q.defer();
-                    
-        var data = {
-                 "getContactDetailsWS": {
-                 }
-             };
-
-        var url = 'generator/views/templates/taller1.html';
-        $http.get(url)
-            .then(success(deferred), error(deferred));
-
-        return deferred.promise;
-    }
-
-
-    function success(deferred) {
+    /*function success(deferred) {
         return function(response) {
             deferred.resolve(response.data || response);
         };
@@ -90,11 +74,10 @@ app.factory('TemplateService', ['$location', '$q', '$http', function ($location,
         return function(error) {
             deferred.reject(error.errorData || error);
         };
-    }
+    }*/
 
 
     return {
-        readHTML: readHTML,
         getDefaultInfo: getDefaultInfo,
         getPictures: getPictures
     };

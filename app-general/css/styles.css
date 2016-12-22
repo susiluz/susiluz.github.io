@@ -7,20 +7,9 @@
   margin: 0;
 }
 
-/*html{
-	-webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    font-family: Verdana,sans-serif;
-    background-attachment: fixed,	fixed;
-    background-image: url("../img/overlay.png");
-    background-position: top left,	center center;
-    background-repeat: no-repeat,	none;
-    background-size: auto,	cover;
-}*/
 
 html, body{
     height: 100%;
-    /*font-family: Verdana,sans-serif;*/
 }
 
 html{
@@ -101,7 +90,8 @@ button{
 
 .copyButton{
 	font-size: 1.1em;
-    font-weight: 900;
+  font-weight: 900;
+  letter-spacing: 0.1em;
 }
 
 

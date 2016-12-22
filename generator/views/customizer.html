@@ -1,6 +1,6 @@
 <div class="single-block">
     <div class="title">
-        <label>Titulo Principal</label>
+        <label>Título Principal</label>
         <span ng-click="turnOnOffElement(emailInfo.mainTitle)">
             <img ng-if="emailInfo.mainTitle.active" src="app-general/img/on.gif">
             <img ng-if="!emailInfo.mainTitle.active" src="app-general/img/off.gif">
@@ -36,7 +36,7 @@
 </div>
 <div class="single-block">
     <div class="title">
-        <label> Titulo Intermedio </label>
+        <label> Título Intermedio </label>
         <span ng-click="turnOnOffElement(emailInfo.subtitle)">
             <img ng-if="emailInfo.subtitle.active" src="app-general/img/on.gif">
             <img ng-if="!emailInfo.subtitle.active" src="app-general/img/off.gif">
@@ -53,7 +53,7 @@
                 <img ng-if="!emailInfo.column1.active" src="app-general/img/off.gif">
             </span>
         </div>
-        <label>Titulo</label>
+        <label>Título</label>
         <input ng-model="emailInfo.column1.title">
         <label>Texto</label>
         <div class="input-group" ng-repeat="item in emailInfo.column1.items track by $index">
@@ -70,7 +70,7 @@
                 <img ng-if="!emailInfo.column2.active" src="app-general/img/off.gif">
             </span>
         </div>
-        <label>Titulo</label>
+        <label>Título</label>
         <input ng-model="emailInfo.column2.title">
         <label>Texto</label>
         <div class="input-group" ng-repeat="item in emailInfo.column2.items track by $index">
@@ -158,7 +158,7 @@
                 <img ng-if="!emailInfo.contactEmail.active" src="app-general/img/off.gif">
             </span>
         </div>
-        <input ng-model="emailInfo.contactEmail.text" ng-disabled="!emailInfo.contactEmails.active">
+        <input ng-model="emailInfo.contactEmail.text" ng-disabled="!emailInfo.contactEmail.active">
     </div>
 
     <div id="phone">
