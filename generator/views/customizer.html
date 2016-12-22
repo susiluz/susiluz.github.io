@@ -1,0 +1,184 @@
+<div class="single-block">
+    <div class="title">
+        <label>Titulo Principal</label>
+        <span ng-click="turnOnOffElement(emailInfo.mainTitle)">
+            <img ng-if="emailInfo.mainTitle.active" src="app-general/img/on.gif">
+            <img ng-if="!emailInfo.mainTitle.active" src="app-general/img/off.gif">
+        </span>
+    </div>
+    <input ng-model="emailInfo.mainTitle.text" ng-disabled="!emailInfo.mainTitle.active">
+</div>
+<div class="single-block">
+    <div class="title">
+        <label>Texto Intro</label>
+        <span ng-click="turnOnOffElement(emailInfo.intro)">
+            <img ng-if="emailInfo.intro.active" src="app-general/img/on.gif">
+            <img ng-if="!emailInfo.intro.active" src="app-general/img/off.gif">
+        </span>
+    </div>
+     <div class="input-group" ng-repeat="item in emailInfo.intro.items track by $index">
+              <textarea type="text" class="form-control" ng-model="item.text" ng-disabled="!emailInfo.intro.active"></textarea>
+              <span class="input-group-addon" id="basic-addon2" ng-click="removeTextItem($index, emailInfo.intro)">X</span>
+        </div>
+    <button ng-click="addTextItem(emailInfo.intro)"> Añadir párrafo </button>
+</div>
+<div class="single-block">
+    <div class="title">
+        <label>Foto Intro</label>
+        <span ng-click="turnOnOffElement(emailInfo.picture1)">
+            <img ng-if="emailInfo.picture1.active" src="app-general/img/on.gif">
+            <img ng-if="!emailInfo.picture1.active" src="app-general/img/off.gif">
+        </span>
+    </div>
+    <div class="pictures-carousel">
+        <img ng-repeat="picture in pictures" ng-src="{{picture.url}}" ng-click="selectPicture(picture, emailInfo.picture1)" ng-class="{selected: picture.url == emailInfo.picture1.url || picture.url == emailInfo.picture2.url || picture.url == emailInfo.picture3.url}">
+    </div>
+</div>
+<div class="single-block">
+    <div class="title">
+        <label> Titulo Intermedio </label>
+        <span ng-click="turnOnOffElement(emailInfo.subtitle)">
+            <img ng-if="emailInfo.subtitle.active" src="app-general/img/on.gif">
+            <img ng-if="!emailInfo.subtitle.active" src="app-general/img/off.gif">
+        </span>
+    </div>
+    <input ng-model="emailInfo.subtitle.text" ng-disabled="!emailInfo.subtitle.active">
+</div>
+<div class="columns-block" id="columns-text">
+    <div>
+        <div class="title">
+            <label> Columna 1</label>
+            <span ng-click="turnOnOffElement(emailInfo.column1)">
+                <img ng-if="emailInfo.column1.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.column1.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <label>Titulo</label>
+        <input ng-model="emailInfo.column1.title">
+        <label>Texto</label>
+        <div class="input-group" ng-repeat="item in emailInfo.column1.items track by $index">
+              <textarea type="text" class="form-control" ng-model="item.text" ng-disabled="!emailInfo.column1.active"></textarea>
+              <span class="input-group-addon" id="basic-addon2" ng-click="removeTextItem($index, emailInfo.column1)">X</span>
+        </div>
+        <button ng-click="addTextItem(emailInfo.column1)" ng-disabled="!emailInfo.column1.active"> Añadir párrafo </button>
+    </div>
+    <div>
+        <div class="title">
+            <label> Columna 2</label>
+            <span ng-click="turnOnOffElement(emailInfo.column2)">
+                <img ng-if="emailInfo.column2.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.column2.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <label>Titulo</label>
+        <input ng-model="emailInfo.column2.title">
+        <label>Texto</label>
+        <div class="input-group" ng-repeat="item in emailInfo.column2.items track by $index">
+              <textarea type="text" class="form-control" ng-model="item.text" ng-disabled="!emailInfo.column2.active"></textarea>
+              <span class="input-group-addon" id="basic-addon2" ng-click="removeTextItem($index, emailInfo.column2)">X</span>
+        </div>
+        <button ng-click="addTextItem(emailInfo.column2)" ng-disabled="!emailInfo.column2.active"> Añadir párrafo </button>
+    </div>
+</div>
+<div class="columns-block">
+    <div>
+        <div class="title">
+            <label> Foto 1</label>
+            <span ng-click="turnOnOffElement(emailInfo.picture2)">
+                <img ng-if="emailInfo.picture2.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.picture2.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <!-- <input> -->
+    </div>
+    <div>
+        <div class="title">
+            <label> Foto 2</label>
+            <span ng-click="turnOnOffElement(emailInfo.picture3)">
+                <img ng-if="emailInfo.picture3.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.picture3.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <!-- <input> -->
+    </div>
+
+    <div class="pictures-carousel">
+            <img ng-repeat="picture in pictures" ng-src="{{picture.url}}" ng-click="selectPicture(picture, emailInfo.picture2)" ng-class="{selected: picture.url == emailInfo.picture1.url || picture.url == emailInfo.picture2.url || picture.url == emailInfo.picture3.url}">
+    </div>
+</div>
+<div id="details" class="columns-block">
+    <div id="time">
+         <div class="title">
+            <label> Horario </label>
+            <span ng-click="turnOnOffElement(emailInfo.time)">
+                <img ng-if="emailInfo.time.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.time.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <input ng-model="emailInfo.time.text" ng-disabled="!emailInfo.time.active">
+    </div>
+
+    <div id="price">
+        <div class="title">
+            <label> Importe </label>
+            <span ng-click="turnOnOffElement(emailInfo.price)">
+                <img ng-if="emailInfo.price.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.price.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <input ng-model="emailInfo.price.text" ng-disabled="!emailInfo.price.active">
+    </div>
+    <div id="place">
+        <div class="title">
+            <label> Lugar </label>
+            <span ng-click="turnOnOffElement(emailInfo.place)">
+                <img ng-if="emailInfo.place.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.place.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <input ng-model="emailInfo.place.text" ng-disabled="!emailInfo.place.active">
+    </div>
+</div>
+<div class="single-block">
+    <div class="title">
+            <label> Info adicional </label>
+            <span ng-click="turnOnOffElement(emailInfo.disclaimer)">
+                <img ng-if="emailInfo.disclaimer.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.disclaimer.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+    <input ng-model="emailInfo.disclaimer.text" ng-disabled="!emailInfo.disclaimer.active">
+</div>
+<div id="contact-info" class="columns-block">
+    <div id="email">
+         <div class="title">
+            <label> Email </label>
+            <span ng-click="turnOnOffElement(emailInfo.contactEmail)">
+                <img ng-if="emailInfo.contactEmail.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.contactEmail.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <input ng-model="emailInfo.contactEmail.text" ng-disabled="!emailInfo.contactEmails.active">
+    </div>
+
+    <div id="phone">
+        <div class="title">
+            <label> Teléfono </label>
+            <span ng-click="turnOnOffElement(emailInfo.phone)">
+                <img ng-if="emailInfo.phone.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.phone.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <input ng-model="emailInfo.phone.text" ng-disabled="!emailInfo.phone.active">
+    </div>
+    <div id="web">
+        <div class="title">
+            <label> Web </label>
+            <span ng-click="turnOnOffElement(emailInfo.web)">
+                <img ng-if="emailInfo.web.active" src="app-general/img/on.gif">
+                <img ng-if="!emailInfo.web.active" src="app-general/img/off.gif">
+            </span>
+        </div>
+        <input ng-model="emailInfo.web.text" ng-disabled="!emailInfo.web.active">
+    </div>
+</div>
