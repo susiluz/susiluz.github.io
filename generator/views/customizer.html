@@ -89,7 +89,9 @@
                 <img ng-if="!emailInfo.picture2.active" src="app-general/img/off.gif">
             </span>
         </div>
-        <!-- <input> -->
+        <div class="pictures-carousel">
+            <img ng-repeat="picture in pictures" ng-src="{{picture.url}}" ng-click="selectPicture(picture, emailInfo.picture2)" ng-class="{selected: picture.url == emailInfo.picture1.url || picture.url == emailInfo.picture2.url || picture.url == emailInfo.picture3.url}">
+        </div>
     </div>
     <div>
         <div class="title">
@@ -99,12 +101,14 @@
                 <img ng-if="!emailInfo.picture3.active" src="app-general/img/off.gif">
             </span>
         </div>
-        <!-- <input> -->
+        <div class="pictures-carousel">
+            <img ng-repeat="picture in pictures" ng-src="{{picture.url}}" ng-click="selectPicture(picture, emailInfo.picture2)" ng-class="{selected: picture.url == emailInfo.picture1.url || picture.url == emailInfo.picture2.url || picture.url == emailInfo.picture3.url}">
+        </div>
     </div>
 
-    <div class="pictures-carousel">
+    <!-- <div class="pictures-carousel">
             <img ng-repeat="picture in pictures" ng-src="{{picture.url}}" ng-click="selectPicture(picture, emailInfo.picture2)" ng-class="{selected: picture.url == emailInfo.picture1.url || picture.url == emailInfo.picture2.url || picture.url == emailInfo.picture3.url}">
-    </div>
+    </div> -->
 </div>
 <div id="details" class="columns-block">
     <div id="time">
