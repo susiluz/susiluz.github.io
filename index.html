@@ -15,15 +15,14 @@
 			</header>
 			<div class="main">
 				<div class="customizer">
-					<div ng-include="'generator/views/customizer.html'" ng-if="selectedTemplate == 'MODELO 1'"></div>
+					<div ng-include="'generator/views/customizer.html'"></div>
 				</div>
 				<div class="preview">
-					<div id="customEmail" ng-include="'generator/views/templates/taller.html'" ng-if="selectedTemplate == 'MODELO 1'"></div >
+					<div id="customEmail" ng-include="'generator/views/templates/taller.html'"></div >
 					<div class="button">
 					    <button class="copy-button" ng-click="copyEmail()"> COPIAR EMAIL</button>
 					</div>
 				</div>
-
 			</div>
 
 		</div>

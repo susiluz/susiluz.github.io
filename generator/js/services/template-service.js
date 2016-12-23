@@ -49,9 +49,12 @@ app.factory('TemplateService', ['$location', '$q', '$http', function ($location,
         },
         pictures = [
             {url: 'http://susiluz.neocities.org/img/32.jpg'},
+            {url: 'http://susiluz.neocities.org/img/35.jpg'},
             {url: 'http://susiluz.neocities.org/img/36.jpg'},
+            {url: 'http://susiluz.neocities.org/img/70.jpg'},
             {url: 'http://susiluz.neocities.org/img/106.jpg'},
             {url: 'http://susiluz.neocities.org/img/214.jpg'},
+            {url: 'http://susiluz.neocities.org/img/218.jpg'},
             {url: 'http://susiluz.neocities.org/img/411.jpg'},
             {url: 'http://susiluz.neocities.org/img/600.jpg'},
         ];
@@ -63,19 +66,6 @@ app.factory('TemplateService', ['$location', '$q', '$http', function ($location,
     function getPictures(){
         return pictures;
     }
-
-    /*function success(deferred) {
-        return function(response) {
-            deferred.resolve(response.data || response);
-        };
-    }
-
-    function error(deferred) {
-        return function(error) {
-            deferred.reject(error.errorData || error);
-        };
-    }*/
-
 
     return {
         getDefaultInfo: getDefaultInfo,

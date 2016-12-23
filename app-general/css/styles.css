@@ -215,6 +215,7 @@ div#phone input{
 
 #columns-text.columns-block{
 	justify-content: space-between;
+	padding: 0;
 }
 
 #columns-text.columns-block div{
@@ -303,12 +304,8 @@ div#phone input{
 	cursor: pointer;
 }
 
-.selected{ 
-    background: #000000;
-}
-
 img.selected{
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 .copy-button{
@@ -325,7 +322,7 @@ img.selected{
 
 div.button{
 	background-color: rgba(0, 0, 0, 0.3);
-    width: 85%;
+    /*width: 85%;*/
     min-width: 580px;
     margin: 15px auto;
     padding: 50px 0;
@@ -334,5 +331,11 @@ div.button{
 @media all and (max-width: 960px) {
   	.customizer, .preview {
 		flex: 1 50%;
+	}
+}
+
+@media all and (max-width: 960px) {
+  	.customizer{
+		margin: 0 0 20px 0;
 	}
 }

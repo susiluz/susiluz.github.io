@@ -23,12 +23,7 @@ app.controller('TemplateController', ['$scope', '$templateCache', 'TemplateServi
     };
 
     $scope.selectPicture = function(picture, element){
-        if($scope.emailInfo.picture2 !== '' && $scope.emailInfo.picture2.url !== picture.url){
-            $scope.emailInfo.picture3.url = picture.url;
-        }
-        else{ 
-            element.url = picture.url;
-        }
+        element.url = picture.url;
     };
 
     $scope.addTextItem = function(element){
