@@ -44,7 +44,7 @@ app.factory('TemplateService', ['$location', '$q', '$http', function ($location,
             disclaimer: {text: 'Plazas limitadas por orden de inscripción.', active: true},
             place: {text: 'Madrid', active: true},
             contactEmail: {text: 'info@liderazgoyequilibrio.com', active: true},
-            web: {text: 'www.liderazoyequilibrio.com', active: true},
+            web: {text: 'www.liderazgoyequilibrio.com', active: true},
             phone: {text: '679381124', active: true}
         },
         pictures = [
