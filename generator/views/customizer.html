@@ -102,7 +102,7 @@
             </span>
         </div>
         <div class="pictures-carousel">
-            <img ng-repeat="picture in pictures" ng-src="{{picture.url}}" ng-click="selectPicture(picture, emailInfo.picture2)" ng-class="{selected: picture.url == emailInfo.picture1.url || picture.url == emailInfo.picture2.url || picture.url == emailInfo.picture3.url}">
+            <img ng-repeat="picture in pictures" ng-src="{{picture.url}}" ng-click="selectPicture(picture, emailInfo.picture3)" ng-class="{selected: picture.url == emailInfo.picture1.url || picture.url == emailInfo.picture2.url || picture.url == emailInfo.picture3.url}">
         </div>
     </div>
 
