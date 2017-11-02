@@ -57,6 +57,8 @@ app.factory('TemplateService', ['$location', '$q', '$http', function ($location,
             {url: 'http://susiluz.neocities.org/img/218.jpg'},
             {url: 'http://susiluz.neocities.org/img/411.jpg'},
             {url: 'http://susiluz.neocities.org/img/600.jpg'},
+            {url: 'http://susiluz.neocities.org/img/libro.jpg},
+            {url: 'http://susiluz.neocities.org/img/raquel.jpg}
         ];
 
     function getDefaultInfo(){
